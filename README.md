@@ -1,0 +1,1 @@
+# osmos-ios-sdk-spm
