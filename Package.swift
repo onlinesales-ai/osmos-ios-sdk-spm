@@ -19,8 +19,8 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .binaryTarget(
             name: "osmos",
-            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v2.6.1/osmos-ios-sdk-2.6.1.zip",
-            checksum: "183a8f208347e9ce581b4a4c16601d0770bb9af003800d2bec596649c21010c5"
+            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v2.6.2/osmos-ios-sdk-2.6.2.zip",
+            checksum: "372d7d27693f242bf7faa790494f8959e2be88acbb9e2f4e9dd5ae5d6db55034"
         )
 
     ]
