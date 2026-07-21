@@ -32,4 +32,7 @@ Pod::Spec.new do |s|
   s.swift_versions = ['5.5']
 
   s.source_files = 'Sources/**/*.swift'
+  
+  s.dependency 'osmos-network-ad-core-spm', '>= 1.0.0'
+  
 end
