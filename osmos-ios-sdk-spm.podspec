@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "osmos-ios-sdk-spm"
   s.module_name      = "osmos"
-  s.version          = "3.0.0"
+  s.version          = "3.0.1"
   s.summary          = "iOS SDK for the OSMOS Ad fetching, Ad rendering and Event tracking"
 
 # This description is used to generate tags and improve search results.
@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Sources/**/*.swift'
   
-  s.dependency 'osmos-network-ad-core-spm', '>= 1.0.0'
+  s.dependency 'osmos-network-ad-core-spm', '= 2.0.0'
   
 end
