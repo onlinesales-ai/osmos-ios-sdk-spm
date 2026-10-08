@@ -9,19 +9,31 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "osmos",
-            targets: ["osmos"]),
+            targets: ["OsmosWrapper"]),
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/onlinesales-ai/osmos-ios-network-ad-core-spm",
+            exact: "2.0.0"
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        // Source-less dependency bridge — see header comment.
+        .target(
+            name: "OsmosWrapper",
+            dependencies: [
+                "osmos",
+                .product(name: "OsmosNetworkAdCore", package: "osmos-ios-network-ad-core-spm")
+            ],
+            path: "Sources/osmos-ios-sdk-spm"
+        ),
+
         .binaryTarget(
             name: "osmos",
-            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v2.6.5/osmos-ios-sdk-2.6.5.zip",
-            checksum: "b6273960392c3bdd8cc350ea1d1b4e08ec253928a62b1ef13f14d55b9c506ff5"
+            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v3.0.2/osmos-ios-sdk-3.0.2.zip",
+            checksum: "06d36b2ff2102990c2f92d11b94b1246fa0eb1f0dd25dfe8933d69257eccb63c"
         )
-
     ]
 )
