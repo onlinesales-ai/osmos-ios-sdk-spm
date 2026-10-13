@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "osmos-ios-sdk-spm"
   s.module_name      = "osmos"
-  s.version          = "3.0.2"
+  s.version          = "3.0.3"
   s.summary          = "iOS SDK for the OSMOS Ad fetching, Ad rendering and Event tracking"
 
 # This description is used to generate tags and improve search results.
@@ -24,14 +24,18 @@ Pod::Spec.new do |s|
   s.homepage         = "https://www.osmos.ai/"
   s.license          = 'Apache 2.0'
   s.author           = { "osmos.ai" => "api@osmos.ai" }
-  s.source           = { :git => "https://github.com/onlinesales-ai/osmos-ios-sdk-spm.git", :tag => s.version.to_s }
+  # The compiled SDK ships as a release zip, not as source in this repo —
+  # Sources/ holds only the placeholder SPM needs for its wrapper target.
+  # Without vendored_frameworks CocoaPods installs that placeholder and the
+  # resulting module is empty. Mirrors osmos-network-ad-core-spm.podspec.
+  s.source = { :http => "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v3.0.3/osmos-ios-sdk-3.0.3.zip" }
+  s.vendored_frameworks = "osmos.xcframework"
 
   s.platform     = :ios, '15.0'
   s.requires_arc = true
 
   s.swift_versions = ['5.5']
 
-  s.source_files = 'Sources/**/*.swift'
   
   s.dependency 'osmos-network-ad-core-spm', '= 2.0.0'
   
