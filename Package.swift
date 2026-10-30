@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/onlinesales-ai/osmos-ios-network-ad-core-spm",
-            exact: "2.0.0"
+            exact: "2.1.0"
         )
     ],
     targets: [
@@ -32,8 +32,8 @@ let package = Package(
 
         .binaryTarget(
             name: "osmos",
-            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v3.0.2/osmos-ios-sdk-3.0.2.zip",
-            checksum: "06d36b2ff2102990c2f92d11b94b1246fa0eb1f0dd25dfe8933d69257eccb63c"
+            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v3.1.0/osmos-ios-sdk-3.1.0.zip",
+            checksum: "71def40b5d32159e2de5676e07708d8e4139035b25a2ec129aee390ac50010ae"
         )
     ]
 )
