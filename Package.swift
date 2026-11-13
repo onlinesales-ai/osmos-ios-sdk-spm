@@ -32,8 +32,8 @@ let package = Package(
 
         .binaryTarget(
             name: "osmos",
-            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v3.1.0/osmos-ios-sdk-3.1.0.zip",
-            checksum: "71def40b5d32159e2de5676e07708d8e4139035b25a2ec129aee390ac50010ae"
+            url: "https://github.com/onlinesales-ai/osmos-ios-sdk/releases/download/osmos-sdk-v3.2.0/osmos-ios-sdk-3.2.0.zip",
+            checksum: "d40eb5bf497feb50c9c220fc37e8a16217da771d6145a77d586143b86ab81c1d"
         )
     ]
 )
